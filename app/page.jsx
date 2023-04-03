@@ -1,7 +1,9 @@
 export default function Home() {
   return (
-    <main>
-    hello my frnd
-    </main>
+    <div>
+      <p>
+        Hello my dear future wife take care of yourself 
+      </p>
+    </div>
   )
 }
