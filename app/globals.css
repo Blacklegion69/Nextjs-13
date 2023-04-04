@@ -15,3 +15,13 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
+.loading {
+  position: relative;
+  animation: loading 2s linear infinite;
+}
+@keyframes loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}

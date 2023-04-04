@@ -1,5 +1,5 @@
-export default function Hexadecimal(){
+export default Function Hexadecimal(){
   return (
-      <div>Okkk Hexadecimal</div>
+    <div>Hexadecimal</div>
     )
 }
