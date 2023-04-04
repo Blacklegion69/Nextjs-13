@@ -1,7 +1,15 @@
 export default function Rgb(){
+  
+
+  const x = [..."098wu824817_54÷2+"];
+  
   return (
-    <div className="p-2 text-slate-900 m-2 bg-slate-400 rounded font-bold shadow-md">
-      <strong>rgb(211,252,187)</strong> | This is a RGB Code
+    <div>
+      {
+        x.map((value,index)=>{
+           return <div key={index}>{value}</div>
+        })
+      }
     </div>
     )
 }
