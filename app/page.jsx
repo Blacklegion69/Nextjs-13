@@ -1,6 +1,5 @@
-import Hexadecimal from "./Hexadecimal/page.jsx";
 export default function Home(){
   return (
-    <Hexadecimal />
+    <h1>Home</h1>
     )
 }
