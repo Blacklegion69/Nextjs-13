@@ -6,12 +6,19 @@ export default function Hexa() {
   const [colors, setColors] = useState([]);
   const generateHexadecimalColor = () => {
     let one = "#";
-    let two = "#";
+    let final = "";
     for (let i = 0; i < 6; i++) {
       let randomNumber = Math.floor(Math.random() * 16);
       one += [..."0123456789abcdef"][randomNumber];
-      two += [..."fedcba9876543210"][randomNumber];
+      final += [..."fedcba9876543210"][randomNumber];
     }
+
+    let job = [...final].reverse();
+    let two = "#";
+    for (let i = 0; i < job.length; i++) {
+      two += job[i];
+    }
+
     return {
       one,
       two,
@@ -22,7 +29,7 @@ export default function Hexa() {
   const generateHexadecimalColorArray = () => {
     setColors([]);
     let final = [];
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 120; i++) {
       final.push(generateHexadecimalColor());
     }
     setColors([...final]);
@@ -34,10 +41,18 @@ export default function Hexa() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center items-center flex-wrap gap-2 relative">
-      {colors.map((val) => (
-        <Box a={val.one} b={val.two} bg={val.bg} />
-      ))}
-    </div>
+    <>
+      <button
+        onClick={generateHexadecimalColorArray}
+        className="w-[100px] text-center bg-cyan-600 p-2 m-2 px-4 text-slate-100 rounded font-bold active:scale(0.9)"
+      >
+        Random
+      </button>
+      <div className="w-full flex justify-center items-center flex-wrap gap-2 relative">
+        {colors.map((val) => (
+          <Box a={val.one} b={val.two} bg={val.bg} />
+        ))}
+      </div>
+    </>
   );
 }
