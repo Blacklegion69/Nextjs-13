@@ -1,17 +1,32 @@
 export default async function id({ params }) {
-  const data = await fetch("http://localhost:3001/data", {});
+  const data = await fetch("http://localhost:3001/data", {
+    cache: "force-cache",
+  });
   const res = await data.json();
-
   return (
     <div>
-      <h1>{res[params.id]?.sprites?.normal}</h1>
+      <h1 className="bg-cyan-200 p-2 rounded flex justify-center items-center flex-wrap">
+        <p className="bg-cyan-300 p-1 rounded inline">sprires.normal :</p>{" "}
+        {res[params.id]?.sprites?.normal}
+      </h1>
+      <h1 className="bg-cyan-200 p-2 rounded flex justify-center items-center flex-wrap">
+        <p className="bg-cyan-300 p-1 rounded inline">params.id :</p>{" "}
+        {params.id}
+      </h1>
     </div>
   );
 }
 
-const getInitialProps = (ee) => {
-  console.log(ee);
-};
+export async function generateStaticParams() {
+  const data = await fetch("http://localhost:3001/data", {
+    cache: "force-cache",
+  });
+  const res = await data.json();
+  return res.map((todo) => ({
+    id: todo.national_number,
+  }));
+}
+
 /*
 national_number: '009',
     evolution: null,

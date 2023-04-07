@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
       <body>
         <Link
           href="/"
-          className="w-full text-center bg-cyan-600 p-2 m-2 px-4 text-slate-100 rounded font-bold active:scale(0.9)"
+          className="w-full text-center bg-cyan-600 p-2 m-2 px-4 text-slate-100 rounded font-bold fixed top-0 left-0"
         >
           Home
         </Link>

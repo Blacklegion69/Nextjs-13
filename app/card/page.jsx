@@ -1,5 +1,3 @@
-import Lists from "./Lists.jsx";
-
 export default function Card() {
-  return <Lists />;
+  return "Fetching data from api....";
 }
