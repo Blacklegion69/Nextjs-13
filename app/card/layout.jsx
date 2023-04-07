@@ -1,13 +1,14 @@
-import Lists from "./Lists.jsx";
+import List from "./List.jsx";
+import head from "../head.jsx";
+
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-slate-900 text-slate-100">
+    <html lang="en">
       <head />
-      <body>
-        <div className="flex justify-between items-center">
-          <Lists />
-          <div className="flex-1">{children}</div>
-        </div>
+      <body className="w-full text-slate-900 h-screen flex justify-center items-center relative">
+        <List />
+        {children}
       </body>
     </html>
   );
