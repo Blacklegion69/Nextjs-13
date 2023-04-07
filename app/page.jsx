@@ -8,9 +8,9 @@ export default function Home() {
       </div>
       <Link
         className="w-[100px] text-center bg-cyan-600 p-2 m-2 px-4 text-slate-100 rounded font-bold active:scale(0.9)"
-        href="/exp"
+        href="/card"
       >
-        Exp
+        Card
       </Link>
       <Link
         className="w-[100px] text-center bg-cyan-600 p-2 m-2 px-4 text-slate-100 rounded font-bold active:scale(0.9)"
