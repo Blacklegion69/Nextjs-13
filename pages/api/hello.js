@@ -1,3 +1,3 @@
-export default function api(){
-  return "apis"
+export default function api() {
+  return "apis";
 }
